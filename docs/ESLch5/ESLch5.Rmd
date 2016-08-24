@@ -682,14 +682,14 @@ $\tilde{g}$が、各 $x_i$ において通る点を $z_i = \tilde{g}(x_i)$ と�
 
 ## 証明（Exercise 5.7）
 
-### Step (2): $\int_{a}^{b} \tilde{g}''(x)^2dx \ge \int_{a}^{b} \tilde{g}''(x)^2dx.$
+### Step (2): $\int_{a}^{b} \tilde{g}''(x)^2dx \ge \int_{a}^{b} g''(x)^2dx.$
 
 \begin{align*}
 \tilde{g}''(x) &= h''(x) + g''(x) \\
 \tilde{g}''(x)^2 &= h''(x)^2 + 2h''(x)g''(x) + g''(x)^2 \\
 \int_{a}^{b} \tilde{g}''(x)^2 dx &= \int_{a}^{b} h''(x) dx + \int_{a}^{b} 2h''(x)g''(x) dx + \int_{a}^{b} g''(x) dx \\
 \int_{a}^{b} \tilde{g}''(x)^2 dx &= \int_{a}^{b} h''(x)^2 dx  + \int_{a}^{b} g''(x)^2 \\
-\int_{a}^{b} \tilde{g}''(x)^2 dx &\ge \int_{a}^{b} \tilde{g}''(x)^2dx
+\int_{a}^{b} \tilde{g}''(x)^2 dx &\ge \int_{a}^{b} g''(x)^2dx
 \end{align*}
 また、両辺が等しいのは$h(x)$が全ての$x \in [a,b]$においてゼロの時のみ.
 
@@ -698,8 +698,8 @@ $\tilde{g}$が、各 $x_i$ において通る点を $z_i = \tilde{g}(x_i)$ と�
 
 ### Step (3)
 
-一方、$\tilde{g}$ は最適化問題の解であるので、$\int_{a}^{b} \tilde{g}''(x)^2 dx \le \int_{a}^{b} \tilde{g}''(x)^2dx$. 
-よって、$\int_{a}^{b} \tilde{g}''(x)^2 dx = \int_{a}^{b} \tilde{g}''(x)^2dx$.
+一方、$\tilde{g}$ は最適化問題の解であるので、$\int_{a}^{b} \tilde{g}''(x)^2 dx \le \int_{a}^{b} g''(x)^2dx$. 
+よって、$\int_{a}^{b} \tilde{g}''(x)^2 dx = \int_{a}^{b} g''(x)^2dx$.
 したがって、全ての$x \in [a,b]$について、$h(x) = \tilde{g}(x) - g(x) = 0$. (*証明終*) 
 
 
@@ -725,12 +725,12 @@ $\mathbf{\Omega}_{jk} = \int N''_j(t)N''_k(t) dt$ と定義すると、最小化
 
 ## 平滑化スプラインの自由度
 
-推定値が$\widehat{y} =  \mathbf{H} y$ と書けるタイプ（線形円滑化）のモデルについて、その自由度を
+推定値が$\widehat{y} =  \mathbf{H} y$ と書けるタイプ（線形平滑化）のモデルについて、その自由度を
 
 \[ \mathrm{trace}(\mathbf{H}) \]
 で定義する.
 
-円滑化スプラインの場合：
+平滑化スプラインの場合：
 $\mathbf{S}_\lambda = \mathbf{N}(\mathbf{N}^T\mathbf{N} + \lambda\mathbf{\Omega})^{-1} \mathbf{N}^T$
 と置いて、
 \[ \mathrm{df}_\lambda = 
